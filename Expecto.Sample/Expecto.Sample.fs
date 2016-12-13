@@ -16,4 +16,4 @@ let tests =
 
 [<EntryPoint>]
 let main argv =
-  Tests.runTestsInAssembly defaultConfig argv
+  Tests.runTestsInAssembly {defaultConfig with verbosity = Logging.LogLevel.Debug } argv

@@ -52,6 +52,11 @@ Target "Build" (fun _ ->
   |> MSBuildRelease "" "Rebuild"
   |> ignore
 )
+Target "sample" (fun _ ->
+  !! "Expecto.Sample/Expecto.Sample.fsproj"
+  |> MSBuildRelease "" "Rebuild"
+  |> ignore
+)
 
 
 // --------------------------------------------------------------------------------------
